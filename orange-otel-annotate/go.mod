@@ -1,0 +1,3 @@
+module nephio-otel-annotate
+
+go 1.21.3
