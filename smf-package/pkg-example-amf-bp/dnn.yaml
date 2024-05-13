@@ -1,0 +1,10 @@
+apiVersion: req.nephio.org/v1alpha1
+kind: DataNetwork
+metadata: # kpt-merge: /internet
+  name: internet
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    specializer.nephio.org/owner: workload.nephio.org/v1alpha1.NFDeployment.amf-example
+    specializer.nephio.org/namespace: example
+    internal.kpt.dev/upstream-identifier: 'req.nephio.org|DataNetwork|default|internet'
+spec:
