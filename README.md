@@ -13,3 +13,7 @@ Use  ```kpt fn eval ./testdata/test1/resources.yaml --image marcinziolkowski/ora
 ## Rebuilding docker images for functions
 
 Use ``` ./build-and-push-images.sh ``` to re-build the images and push them to a registry of your choice.
+
+## Re-fetching Nephio packages
+
+kpt packages for Nephio are fetched from [Nephio catalog repo](https://github.com/nephio-project/catalog/tree/main/workloads/free5gc/pkg-example-amf-bp), via ```kpt pkg get https://github.com/nephio-project/catalog/workloads/free5gc/pkg-example-amf-bp@main ```
