@@ -4,6 +4,7 @@ metadata: # kpt-merge: amf-example/amf-example
   name: amf-example
   namespace: amf-example
   annotations:
-    internal.kpt.dev/upstream-identifier: 'workload.nephio.org|NFDeployment|amf-example|amf-example'
+    internal.kpt.dev/upstream-identifier: "workload.nephio.org|NFDeployment|amf-example|amf-example"
 spec:
   provider: amf.free5gc.io
+## i guess tutaj...?
