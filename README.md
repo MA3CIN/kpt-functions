@@ -10,6 +10,8 @@ Head over to the `/smf-package` to view the SMF Free5GC package. Then, run `kpt 
 
 Use `kpt fn eval ./testdata/test1/resources.yaml --image marcinziolkowski/orange-otel-annotate:1.0.0 -- by-path='spec.**.containerPort' ` to run the kpt functions. The values to pass should be as follow: "First annotation" "Second annotation"
 
+Or use `kpt fn eval ./test-deploy/deploy.yaml --image gcr.io/kpt-fn/set-annotations:v0.1.4 -- color=orange fruit=apple ` to run the Google kpt function.
+
 ## Rebuilding docker images for functions
 
 Use `./build-and-push-images.sh` to re-build the images and push them to a registry of your choice.
