@@ -1,0 +1,12 @@
+apiVersion: fn.kpt.dev/v1alpha1
+kind: SetAnnotations
+metadata:
+  name: my-config
+annotations:
+  instrumentation.opentelemetry.io/inject-go: "true"
+  instrumentation.opentelemetry.io/otel-go-auto-target-ex: "/free5gc/amf/amf"
+
+additionalAnnotationFields:
+  - path: spec/template/metadata/annotations
+    kind: NFDeployment
+    create: true

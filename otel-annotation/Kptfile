@@ -16,3 +16,9 @@ upstreamLock:
     directory: /go/get-started
     ref: master
     commit: 3255accc518d53fcb92292bfed9250a7f5b32204
+info:
+  description: sample annotate nf for otel tracing functions
+pipeline:
+  mutators:
+    - image: gcr.io/kpt-fn/set-annotations:v0.1.4
+      configPath: annotation-config.yaml
