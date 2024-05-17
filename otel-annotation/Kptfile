@@ -2,6 +2,9 @@ apiVersion: kpt.dev/v1
 kind: Kptfile
 metadata:
   name: get-started
+  annotations:
+    instrumentation.opentelemetry.io/inject-go: "true"
+    instrumentation.opentelemetry.io/otel-go-auto-target-ex: /free5gc/amf/amf
 upstream:
   type: git
   git:
@@ -22,3 +25,6 @@ pipeline:
   mutators:
     - image: gcr.io/kpt-fn/set-annotations:v0.1.4
       configPath: annotation-config.yaml
+      exclude:
+        - kind: SetAnnotations
+        - kind: Kptfile
