@@ -4,6 +4,9 @@ metadata:
   name: nginx-deployment
   labels:
     app: nginx
+  annotations:
+    instrumentation.opentelemetry.io/inject-go: "true"
+    instrumentation.opentelemetry.io/otel-go-auto-target-exe: /free5gc/amf/amf
 spec:
   replicas: 3
   selector:
@@ -13,6 +16,9 @@ spec:
     metadata:
       labels:
         app: nginx
+      annotations:
+        instrumentation.opentelemetry.io/inject-go: "true"
+        instrumentation.opentelemetry.io/otel-go-auto-target-exe: /free5gc/amf/amf
     spec:
       containers:
         - name: nginx
