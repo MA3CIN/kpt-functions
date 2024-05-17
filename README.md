@@ -12,6 +12,9 @@ Use `kpt fn eval ./testdata/test1/resources.yaml --image marcinziolkowski/orange
 
 Or use `kpt fn eval ./test-deploy/deploy.yaml --image gcr.io/kpt-fn/set-annotations:v0.1.4 -- instrumentation.opentelemetry.io/inject-go=true instrumentation.opentelemetry.io/otel-go-auto-target-exe=/free5gc/amf/amf ` to run the Google kpt function.
 
+Or use `kpt fn render ` to run the Kptfile pipeline.
+
+
 ## Rebuilding docker images for functions
 
 Use `./build-and-push-images.sh` to re-build the images and push them to a registry of your choice.
